@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag "scifi_back", :class => 'banner'%>
+<div class="all">
+  <div class="mid-stuff">
+    <div class="main-content" >
+      <h1>Account Info</h1>
+    </div>
+    <div class="main-content" >
+      <p>
+        <strong>Welcome back <%= @user.fname.capitalize %>!</strong>
+      </p>
+    </div>
+    <div class="main-content" >
+      <p>
+        <strong>Username:</strong>
+        <%= @user.username %>
+      </p>
+    </div>  
+    <div class="main-content" >
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
+    </div>
+
+    <div class="main-content" >
+    <a href="<%= edit_user_path(@user) %>">Edit</a>
+    </div>
+
+    <div class="main-content" >
+    <a href="<%= logout_path %>">Logout</a>
+    </div>
+
+    <div class="main-content" >
+    <%= render "users/tweets/form", tweet: @tweet %>
+    </div>
+
+    <%= render "users/tweets/filtered_tweets", tweets: @tweets %>
+  </div>
+</div>

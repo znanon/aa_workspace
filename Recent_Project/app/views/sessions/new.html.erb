@@ -1,0 +1,48 @@
+<p id=”alert”><%= alert %></p>
+<h1>Welcome to the Doomritter</h1>
+
+<div class="forma">
+  <form action=<%= login_url %> method='post'>
+
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <input type="text" id="username" name="username" placeholder="Username">
+
+    <input type="password" id="password" name="password" placeholder="Password">
+
+    <label class="s-button">
+      <input type="submit" name ="commit" value="Login" data-disable-with="Login">
+    </label>
+  </form>
+</div>
+
+<div class="first-img">
+  <div class="img-textbox">
+  Tired of living a boring, meaningless existence? Can't bare the existential crisis 
+  that looms over your head? Have you always thought that maybe you that you don't feel
+  you fit in anywhere and plan on forcing everyone you know to believe that life is
+  pain and anyone who doesn't accept this is an ignorant fool. Are you a victim to THE SYSTEM?!
+  Well don't accept Jesus just yet, cuz there's a new platform in town that can help you
+  understand that there's more than just you that's cycnical about when the next world 
+  war is. Introducing Doomritter.
+  </div>
+</div>
+<div class="parallax-divider"></div>
+<div class="second-img">
+  <div class="img-textbox">
+  By connecting through the Doomritter network, you will meet other like-minded doomers 
+  who's lives have always been stale as the bread that they eat at 1 A.M in the morning.
+  Pondering death? Talk about it before pulling out the gun then taking a cold shower 
+  with your clothes as you cry in fetal position. You can even share the metal bands that
+  you like or even alternative rock that gets you feeling the vibes.
+  </div>
+</div>
+<div class="parallax-divider"></div>
+<div class="third-img"></div>
+
+<div class="forma">
+  <p> New User? </p>
+</div>
+<div class="forma">
+  <a href="<%= new_user_path %>">Sign up now!</a>
+</div>
